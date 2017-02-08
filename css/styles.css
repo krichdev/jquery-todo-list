@@ -1,0 +1,30 @@
+body {
+	text-align: center;
+	background-color: rgb(52,152,219);
+	font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+	margin-bottom: 25px; 
+	color: white;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#container {
+	max-width: 700px;
+	margin: 100px auto;
+	display: inline-block;
+}
+
+#inputWrap {
+	margin-bottom: 25px;
+}
+
+.inactive {
+	color: red;
+	cursor: pointer;
+	float: right;
+}
