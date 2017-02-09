@@ -2,7 +2,12 @@ $(document).ready(function(){
 
 	$('button').click(function(){
 		var todoItem = $('#userInput').val();
-		$("#userlist").append("<li class='list-group-item'>"+todoItem+"<span class='inactive glyphicon glyphicon-remove-circle'>");
+		var removeStr = todoItem.replace("tomorrow", " ");
+		if (todoItem.includes('tomorrow')){
+			$("#tomorrowList").append("<li id='task' class='list-group-item'>"+removeStr+"<span class='inactive glyphicon glyphicon-remove-circle'>");
+		} else {
+			$("#userlist").append("<li id='task' class='list-group-item'>"+todoItem+"<span class='inactive glyphicon glyphicon-remove-circle'>");
+		}
 		resetForm();
 		removeToDo();
 	})
@@ -16,7 +21,8 @@ $(document).ready(function(){
 			$(this).parent().remove();
 		})
 	}
-	// Allows the tasks to be sortable
+	// Allows the tasks to be sortable + droppable!
 	$(".sortable").sortable();
+
 });
 
